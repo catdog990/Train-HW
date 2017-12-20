@@ -40,6 +40,7 @@ $(document).ready(function(){
   console.log(wut.time);
   console.log(wut.frequency);
 
+// Clearing info when button is clicked //
   $("#name-input").val("");
   $("#destination-input").val("");
   $("#firstT-input").val("");
@@ -63,9 +64,9 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey){
 	console.log(freque);
 
 
-
-	 $("#train-table > tbody").append("<tr><td>" + tName + "</td><td>" + des + "</td><td>" +
-  freque + "</td><td>" + tTime + "</td><td>" + + "</td></tr>");
+// ******Putting Info into the table**********//////////
+	 $("#train-table > tbody").append("<tr><th>" + tName + "</th><th>" + des + "</th><th>" +
+  freque + "</th><th>" + tTime + "</th><th>" + + "</th></tr>");
 });
  
 });
