@@ -48,5 +48,19 @@ $(document).ready(function(){
 
     });
 
+database.ref().on("child_added", function(childSnapshot, prevChildKey){
+
+	console.log(childSnapshot.val());
+
+	var tName = childSnapshot.val().name;
+	var des = childSnapshot.val().destination;
+	var tTime = childSnapshot.val().time;
+	var freque = childSnapshot.val().frequency;
+
+	console.log(tName);
+	console.log(des);
+	console.log(tTime);
+	console.log(freque);
+});
  
 });
