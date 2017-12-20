@@ -61,6 +61,11 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey){
 	console.log(des);
 	console.log(tTime);
 	console.log(freque);
+
+
+
+	 $("#train-table > tbody").append("<tr><td>" + tName + "</td><td>" + des + "</td><td>" +
+  freque + "</td><td>" + tTime + "</td><td>" + + "</td></tr>");
 });
  
 });
