@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 
-
+// firebase info //
   var config = {
     apiKey: "AIzaSyDDu89dxL1orbws7fBelS3-2OGx7OIzzj0",
     authDomain: "train-hw-5d3bf.firebaseapp.com",
@@ -49,6 +49,7 @@ $(document).ready(function(){
 
     });
 
+
 database.ref().on("child_added", function(childSnapshot, prevChildKey){
 
 	console.log(childSnapshot.val());
@@ -64,9 +65,15 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey){
 	console.log(freque);
 
 
+// calculations//
+
+	 
+
+
+
 // ******Putting Info into the table**********//////////
 	 $("#train-table > tbody").append("<tr><th>" + tName + "</th><th>" + des + "</th><th>" +
-  freque + "</th><th>" + tTime + "</th><th>" + + "</th></tr>");
+  freque + "</th><th>" + + "</th><th>" + + "</th></tr>");
 });
  
 });
