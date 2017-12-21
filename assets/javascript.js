@@ -23,7 +23,7 @@ $(document).ready(function(){
   	var des = $("#destination-input").val().trim();
   	var tTime = $("#firstT-input").val().trim();
   	var freque = $("#frequency-input").val().trim();
-
+    var min =0;
 
 // ***object to hold the stuff N things*****//
   var wut = {
@@ -66,14 +66,21 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey){
 
 
 // calculations//
-
+var changeDate = moment.unix(tTime).format("MM/DD/YY");
 	 
+var calculate = moment().diff(moment.unix(tTime, "X"), "minutes");
+  console.log(calculate);
 
-
+var total = calculate * freque;
+console.log(total);
 
 // ******Putting Info into the table**********//////////
 	 $("#train-table > tbody").append("<tr><th>" + tName + "</th><th>" + des + "</th><th>" +
   freque + "</th><th>" + + "</th><th>" + + "</th></tr>");
+
 });
- 
+
+    // var date = $("firstT-input").val().trim();
+   
+
 });
